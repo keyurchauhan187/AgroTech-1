@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer bg-light py-4 mt-5">
       <div className="container text-center">
-        <h3 className="mb-3">All Rights Reserved &copy; Agrotech Solution</h3>
+        <h1 className="mb-3">All Rights Reserved &copy; Agrotech Solution</h1>
         <p className="mb-2">
           <Link to="/about">About Us</Link> | <Link to="/contact">Contact</Link>
         </p>

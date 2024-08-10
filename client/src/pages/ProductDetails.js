@@ -60,7 +60,10 @@ const ProductDetails = () => {
           <h6>Description : {product.description}</h6>
           <h6>
             Price :
-            {"₹ " + product?.price?.toLocaleString()}
+            {product?.price?.toLocaleString("en-US", {
+              style: "currency",
+              currency: "USD",
+            })}
           </h6>
           <h6>Category : {product?.category?.name}</h6>
           <div className="flex flex-row">
@@ -99,8 +102,10 @@ const ProductDetails = () => {
                 <div className="card-name-price">
                   <h5 className="card-title">{p.name}</h5>
                   <h5 className="card-title card-price">
-                    {"₹ " + p.price.toLocaleString(
-                    )}
+                    {p.price.toLocaleString("en-US", {
+                      style: "currency",
+                      currency: "USD",
+                    })}
                   </h5>
                 </div>
                 <p className="card-text ">
@@ -108,7 +113,7 @@ const ProductDetails = () => {
                 </p>
                 <div className="card-name-price">
                   <button
-                    className="btn btn-success ms-1"
+                    className="btn btn-info ms-1"
                     onClick={() => navigate(`/product/${p.slug}`)}
                   >
                     More Details

@@ -27,13 +27,13 @@ const CategoryProduct = () => {
   return (
     <Layout>
       <div className="container mt-5 category">
-        <h2 style={{ marginTop: "20vh" }} className="text-uppercase text-center">{category?.name}</h2>
+        <h2 style={{marginTop:"20vh"}} className="text-uppercase text-center">{category?.name}</h2>
         <h6 className="text-center">{products?.length} result found </h6>
         <div className="row">
           <div className="col-md-9 offset-1">
             <div className="d-flex flex-wrap">
               {products?.map((p) => (
-                <div className="card m-2" key={p._id}>
+                <div className="card m-2 bg-white" key={p._id}>
                   <img
                     src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
@@ -43,7 +43,10 @@ const CategoryProduct = () => {
                     <div className="card-name-price">
                       <h5 className="card-title">{p.name}</h5>
                       <h5 className="card-title card-price">
-                        {"₹ " + p.price.toLocaleString()}
+                        {p.price.toLocaleString("en-US", {
+                          style: "currency",
+                          currency: "INR",
+                        })}
                       </h5>
                     </div>
                     <p className="card-text ">
@@ -51,7 +54,7 @@ const CategoryProduct = () => {
                     </p>
                     <div className="card-name-price">
                       <button
-                        className="btn btn-success ms-1"
+                        className="btn btn-info ms-1"
                         onClick={() => navigate(`/product/${p.slug}`)}
                       >
                         More Details

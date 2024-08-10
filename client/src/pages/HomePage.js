@@ -133,12 +133,12 @@ const HomePage = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-      <div className="d-flex justify-content-center align-items-center mt-5">
-        <div className="col-md-8">
-          <h1 className="text-center m-5">Products</h1>
-          <div className="d-flex flex-wrap ms-5 justify-conternt-center align-items-center" >
+      <div>
+        <div className="col-md-9">
+          <h1 className="text-center mt-2">Products</h1>
+          <div className="d-flex flex-wrap ms-5">
             {products?.map((p) => (
-              <div className="card m-2" key={p._id} style={{ width: "20rem", }}>
+              <div className="card m-2" key={p._id} style={{ width: "20rem" }}>
                 <img
                   src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
@@ -148,7 +148,10 @@ const HomePage = () => {
                   <div className="card-name-price">
                     <h5 className="card-title">{p.name}</h5>
                     <h5 className="card-title card-price">
-                      {"₹ " + p.price.toLocaleString()}
+                      {p.price.toLocaleString("en-US", {
+                        style: "currency",
+                        currency: "USD",
+                      })}
                     </h5>
                   </div>
                   <p className="card-text">

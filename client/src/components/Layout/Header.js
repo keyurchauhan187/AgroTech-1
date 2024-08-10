@@ -87,6 +87,9 @@ const Header = () => {
             </div>
             <div className="ms-auto d-flex align-items-center">
               <ul className="navbar-nav ms-3">
+                <li><NavLink className="btn btn-success mx-5"
+                  to="/FramAI"
+                >FramAI</NavLink></li>
                 {!auth?.user ? (
                   <>
                     <li className="nav-item">
@@ -146,7 +149,7 @@ const Header = () => {
         </div>
 
       </nav>
-      <div className="container-fluid justify-content-center p-2">
+      <div className="container-fluid justify-content-center">
         <div className="d-flex flex-wrap justify-content-center">
           {categories?.map((c) => (
             <NavLink

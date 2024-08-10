@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
 
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 * {
   margin: 0;
   padding: 0;
@@ -146,4 +150,55 @@
   background-color: #434343 !important;
   color: white;
   padding: 20px 0px;
+}
+
+
+/* ######## kishan ##### */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Poppins:ital,wght@0,400;0,500;1,200;1,300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	background: url("https://res.cloudinary.com/deq0hxr3t/image/upload/v1723269748/farm_zrvzgq.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+	font-family: "Baloo 2", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.shade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.bg-disease {
+  background-image: url("");
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  height: 100vh;
+  width: 100vw;
+  position: relative;
 }
