@@ -1,0 +1,3 @@
+Frontend: https://agro-tech-ten.vercel.app
+
+Backend: https://agrotech-y7d0.onrender.com
