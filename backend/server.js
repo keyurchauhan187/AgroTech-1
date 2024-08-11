@@ -33,7 +33,7 @@ app.use("/api/v1/product", productRoutes);
 app.use("/framAi", createDiseaseController)
 //api
 app.get("/",(req,res)=>{
-    res.send("<h1>Welcome to ecommerce web site by Jaydip</h1>")
+    res.send("<h1>Welcome to ecommerce web site by Team Core Tech</h1>")
 });
 
 const PORT=process.env.PORT || 8080;  

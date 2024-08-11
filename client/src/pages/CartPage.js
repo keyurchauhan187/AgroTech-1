@@ -49,7 +49,7 @@ const CartPage = () => {
   const getToken = async () => {
     console.log("calkll ");
     try {
-      const { data } = await axios.get("http://localhost:8080/api/v1/product/braintree/token");
+      const { data } = await axios.get("https://agrotech-y7d0.onrender.com/api/v1/product/braintree/token");
 
       console.log("data : ", data);
       setClientToken(data?.clientToken);

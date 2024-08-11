@@ -38,7 +38,7 @@ const DiseasePage = () => {
         // ##### url backend baki
         .then((data) => {
           console.log( data.url )
-          fetch("http://localhost:8080/framAi", {
+          fetch("https://agrotech-y7d0.onrender.com/framAi", {
             method: "POST",
             headers:{"content-type":"application/json"},
             body: JSON.stringify({ url: data.url })
