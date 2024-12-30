@@ -2,7 +2,7 @@ Team: Core Tech
 
 Members:
   -  Jaynish Chhabhaiya
-  -  Keyur Chuhan
+  -  Keyur Chauhan 
   -  Kishan Dabhi
   -  Parth Thoriya
  
